@@ -5,10 +5,10 @@ void insere(aviao **lista,char codigo[7],int numero_p, char capitao[20]){
 
     aviao *p, *inicio;
 				if((*lista)==NULL){
-						p=criar_aviao(codigo,capitao,numero_p);
+						p=criar_aviao(codigo,numero_p, capitao);
 						(*lista)=inicio=p;
 			}else{
-						p=criar_aviao(codigo,capitao,numero_p);
+						p=criar_aviao(codigo,numero_p, capitao);
 						(*lista)->prox=p;
 						inicio=p;
 				}
