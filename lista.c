@@ -15,7 +15,14 @@ void insere(aviao **lista,char codigo[7],int numero_p, char capitao[20]){
 }//CESAR
 
 aviao* criar_aviao(char codigo[7],int numero_p, char capitao[20]){
-
+	aviao *p;
+	p=(aviao*)malloc(sizeof(aviao));
+	fflush(stdin);
+	strcpy(p->codigo,codigo);
+	strcpy(p->capitao,capitao);
+	p->numero_p=numero_p;
+	p->prox=NULL;
+	return p;
 }//JOAO
 
 void check_lista(aviao **aviao, char codigo[7]){
